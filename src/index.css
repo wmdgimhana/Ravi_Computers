@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.Poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.home {
+  background-image: url(./assets/homeImg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling individual dots */
+.slick-dots li {
+  margin: 0 2px; /* Adjust the spacing between dots */
+}
+
+/* Styling the dots themselves */
+.slick-dots li button {
+  width: 5px;
+  height: 5px; /* Adjust the font size of the dots */
+  color: #ee2323; /* Adjust the color of the dots */
+}
+
+/* Styling the active dot */
+.slick-dots li.slick-active button {
+  color: #b31010; /* Adjust the color of the active dot */
+}
+
+.bgRound {
+  background-color: hsla(0, 0%, 85%, 1);
+}
+
+.link {
+  cursor: pointer;
+}
+
+/* navbar hover effect */
+.link {
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  background-color: #f5f3f3;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.4s;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Poppins";
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+.paginationBttns a {
+  background-color: transparent;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+}
+
+.paginationBttns a:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.paginationBttns .paginationActive a {
+  background-color: black;
+  color: #fff;
+}
